@@ -11,10 +11,11 @@ const goalRoutes = require('./routes/goalRoutes')
 
 app.use(cors());
 app.use(express.json());
-app.use('/',userRoutes);
-app.use('/api',transactionRoutes);
-app.use('/api',budgetRoutes);
-app.use('/api',goalRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/transactions', transactionRoutes);
+app.use('/api/budgets', budgetRoutes);
+app.use('/api/goals', goalRoutes);
+
 
 
 app.get('/',(req,res) => {
